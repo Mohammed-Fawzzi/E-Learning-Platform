@@ -68,7 +68,7 @@ footer {
   background-color: #a88759 !important;
 }
 .Toastify__progress-bar--success {
-  background-color: #a88759 !important; 
+  background-color: #a88759 !important;
 }
 
 /* Navbar */
@@ -320,11 +320,44 @@ footer .logo {
 .login .col-md-6 input,
 .add-admin .col-md-6 input,
 .add-admin .col-md-6 select,
-.add-student .col-md-6 input {
+.add-student .col-md-6 input,
+.admins .card {
   border-radius: 0;
   border: 2px solid var(--main-color);
 }
-
+.admins .col-md-4 {
+  position: relative;
+}
+.admins .col-md-4 span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--main-color);
+  color: var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  font-weight: bold;
+  padding: 2px 8px;
+}
+.admins .card-header {
+  background-color: var(--main-color);
+  border: 2px solid var(--accent-color);
+}
+.admins .card-details {
+  border-top: 2px solid var(--main-color);
+}
+.admins .btn {
+  color: var(--accent-color) !important;
+  font-weight: bold;
+}
+@media screen and (max-width:768px) {
+  .admins p {
+    font-size: 12px;
+  }
+  .admins .btn {
+    font-weight: 600;
+  }
+}
 /* Quiz */
 /* .quiz input {
   border-radius: 0;

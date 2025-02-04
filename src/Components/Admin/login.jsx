@@ -12,7 +12,7 @@ export default function Login() {
   // Navigate to Dashboard
   const navigate = useNavigate();
 
-  // loading
+  // loading State
   const [isLoading, setisLoading] = useState(false);
 
   // Fetch Api Data

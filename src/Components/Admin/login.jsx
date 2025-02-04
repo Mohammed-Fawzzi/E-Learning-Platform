@@ -21,7 +21,8 @@ export default function Login() {
       setisLoading(true);
       let { data } = await Api.post(`/api/admin/login`, values);
       toast.success(`تم تسجبل الدخول بنجاح`);
-      sessionStorage.setItem("Role", data.data.admin);
+      sessionStorage.setItem("AdminLogin", data.data.admin);
+      sessionStorage.setItem("AdminRole", data.data.role);
       setisLoading(false);
       navigate("/admin-dashboard");
     } catch (error) {

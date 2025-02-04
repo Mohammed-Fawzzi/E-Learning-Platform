@@ -28,6 +28,11 @@ export default function Admins() {
     }
   }
 
+  // Handle Admin Id
+  function handleAdminId(adminId) {
+    sessionStorage.setItem("OneAdmin", adminId);
+  }
+
   // Call Function
   useEffect(() => {
     displayAdmins();
@@ -51,7 +56,11 @@ export default function Admins() {
           <div className="row">
             {admins.length > 0 ? (
               admins.map((admin, index) => (
-                <div className="col-md-4 mb-4" key={admin._id}>
+                <div
+                  className="col-md-4 mb-4"
+                  key={admin._id}
+                  onClick={() => handleAdminId(admin._id)}
+                >
                   <div className="card p-4 shadow-md">
                     <span>{index + 1}</span>
                     {/* Admin Icon */}

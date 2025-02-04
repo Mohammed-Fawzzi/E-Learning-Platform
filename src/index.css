@@ -321,6 +321,7 @@ footer .logo {
 .add-admin .col-md-6 input,
 .add-admin .col-md-6 select,
 .add-student .col-md-6 input,
+.add-student .col-md-6 select,
 .admins .card {
   border-radius: 0;
   border: 2px solid var(--main-color);

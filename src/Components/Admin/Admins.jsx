@@ -28,6 +28,20 @@ export default function Admins() {
     }
   }
 
+  // Delete Admin
+  async function deleteAdmin(adminId) {
+    try {
+      await api.delete(`/api/admin/${adminId}`);
+      setAdmins((prevAdmin) =>
+        prevAdmin.filter((admin) => admin._id !== adminId)
+      );
+      toast.success("تم حذف المسؤول بنجاح.");
+    } catch (error) {
+      console.error("Error deleting student:", error);
+      toast.error("حدثت مشكلة أثناء محاولة حذف المسؤول!");
+    }
+  }
+
   // Handle Admin Id
   function handleAdminId(adminId) {
     sessionStorage.setItem("OneAdmin", adminId);
@@ -88,7 +102,11 @@ export default function Admins() {
                       <button className="btn d-flex align-items-center gap-1 rounded-0">
                         تعديل <FaEdit />
                       </button>
-                      <button className="btn d-flex align-items-center gap-1 rounded-0">
+
+                      <button
+                        className="btn d-flex align-items-center gap-1 rounded-0"
+                        onClick={() => deleteAdmin(admin._id)}
+                      >
                         حذف <FaTrashAlt />
                       </button>
                     </div>

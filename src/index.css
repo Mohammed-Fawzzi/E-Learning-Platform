@@ -322,14 +322,17 @@ footer .logo {
 .add-admin .col-md-6 select,
 .add-student .col-md-6 input,
 .add-student .col-md-6 select,
-.admins .card {
+.admins .card,
+.students .card {
   border-radius: 0;
   border: 2px solid var(--main-color);
 }
-.admins .col-md-4 {
+.admins .col-md-4,
+.students .col-md-4 {
   position: relative;
 }
-.admins .col-md-4 span {
+.admins .col-md-4 span,
+.students .col-md-4 span {
   position: absolute;
   top: 0;
   right: 0;
@@ -340,22 +343,29 @@ footer .logo {
   font-weight: bold;
   padding: 2px 8px;
 }
-.admins .card-header {
+.admins .card-header,
+.students .card-header,
+.admins button,
+.students button {
   background-color: var(--main-color);
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color) !important;
 }
-.admins .card-details {
+.admins .card-details,
+.students .card-details {
   border-top: 2px solid var(--main-color);
 }
-.admins .btn {
+.admins .btn,
+.students .btn {
   color: var(--accent-color) !important;
   font-weight: bold;
 }
-@media screen and (max-width:768px) {
-  .admins p {
+@media screen and (max-width: 768px) {
+  .admins p,
+  .students p {
     font-size: 12px;
   }
-  .admins .btn {
+  .admins .btn,
+  .students .btn {
     font-weight: 600;
   }
 }

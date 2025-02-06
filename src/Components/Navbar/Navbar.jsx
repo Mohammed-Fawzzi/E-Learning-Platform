@@ -1,8 +1,21 @@
 import React from "react";
 import { CgSoftwareDownload } from "react-icons/cg";
-import { NavLink } from "react-router-dom";
+import { TbLogout2 } from "react-icons/tb";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
+  // Logout Function
+  function handleLogout() {
+    sessionStorage.removeItem("AdminLogin");
+    sessionStorage.removeItem("AdminRole");
+    navigate("/admin-login");
+  }
+
+  // Check if AdminLogin exists in sessionStorage
+  const isAdminLoggedIn = sessionStorage.getItem("AdminLogin");
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
@@ -59,6 +72,17 @@ export default function Navbar() {
                   ملخصات نصية <CgSoftwareDownload size={25} />
                 </NavLink>
               </li>
+
+              {isAdminLoggedIn && (
+                <li className="nav-item">
+                  <button
+                    className="nav-link main-bg text-white"
+                    onClick={handleLogout}
+                  >
+                    تسجيل الخروج <TbLogout2 size={25} />
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
         </div>

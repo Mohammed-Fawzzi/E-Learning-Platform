@@ -356,7 +356,6 @@ footer .logo {
 }
 .admins .btn,
 .students .btn {
-  color: var(--accent-color) !important;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
@@ -369,6 +368,14 @@ footer .logo {
     font-weight: 600;
   }
 }
+.modal input,
+.modal button,
+.modal button:hover  {
+  border-radius: 0;
+  border: 2px solid var(--accent-color);
+}
+
+
 /* Quiz */
 /* .quiz input {
   border-radius: 0;

@@ -16,7 +16,7 @@ export default function Dashboard() {
 
       <section className="my-4 dashboard">
         <div className="container my-5 py-3">
-          <h3 className="text-center fw-bold mb-2">لوحة تحكم</h3>
+          <h3 className="text-center fw-bold mb-2">لوحة التحكم</h3>
 
           {/* عرض جميع الأقسام إذا كان الدور "super_admin" */}
           {adminRole === "super_admin" && (
